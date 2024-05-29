@@ -30,7 +30,7 @@ pub async fn on_get_hero_basic_type_info_cs_req(
                 retcode: 0,
                 gender: mc.get_gender().into(),
                 cur_basic_type: mc.get_type().into(),
-                basic_type_info_list:vec![HeroBasicTypeInfo {
+                basic_type_info_list: vec![HeroBasicTypeInfo {
                     basic_type: mc.get_type().into(),
                     ..Default::default()
                 }],
@@ -59,4 +59,37 @@ pub async fn on_player_heart_beat_cs_req(
             },
         )
         .await
+}
+
+pub type PlayerLoginFinishCsReq = Dummy;
+
+pub async fn on_player_login_finish_cs_req(
+    session: &mut PlayerSession,
+    _: &PlayerLoginFinishCsReq,
+) -> Result<()> {
+    session
+        .send(CMD_PLAYER_LOGIN_FINISH_SC_RSP, Dummy {})
+        .await?;
+    session
+        .send(CMD_CONTENT_PACKAGE_UNLOCK_SC_RSP, Dummy {})
+        .await?;
+    session
+        .send(CMD_CONTENT_PACKAGE_GET_DATA_SC_RSP, Dummy {})
+        .await?;
+    session
+        .send(
+            CMD_CONTENT_PACKAGE_SYNC_DATA_SC_NOTIFY,
+            Chhopfkjmje {
+                data: Some(Gdafmkkhkkl {
+                    himejaheaoj: vec![Bejmehlnpan {
+                        status: Olngclnnaie::ContentPackageStatusFinished.into(),
+                        jkbgighlakf: 200001,
+                    }],
+                    eoljolnkooh: 0,
+                }),
+            },
+        )
+        .await?;
+
+    Ok(())
 }

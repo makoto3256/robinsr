@@ -96,38 +96,58 @@ macro_rules! trait_handler {
 }
 
 trait_handler! {
-    GetArchiveDataCsReq 2361;
-    Gfmigicacfn 321;// DressRelicAvatarCsReq
-    DressAvatarCsReq 387; // DressAvatarCsReq
-    Nbmofdgfejk 303;// TakeOffRelicCsReq
-    GetAvatarDataCsReq 361;
-    TakeOffEquipmentCsReq 362;// TakeOffEquipmentCsReq
-    PveBattleResultCsReq 161;
-    Dgaiigecbee 3961;// SendMsgCsReq
-    Pignjacjgdl 3939; // GetPrivateChatHistoryCsReq
-    Jhfffmnkcbf 2961;// GetFriendListInfoCsReq
+    PlayerGetTokenCsReq 39;         // PlayerGetTokenScRsp
+    PlayerLoginCsReq 61;            // PlayerLoginScRsp, PlayerBasicInfo
+    GetMissionStatusCsReq 1256;     // GetMissionStatusScRsp, Mission
+    GetBasicInfoCsReq 90;           // GetBasicInfoScRsp, PlayerSettingInfo
+    GetHeroBasicTypeInfoCsReq 68;   // GetHeroBasicTypeInfoScRsp, HeroBasicTypeInfo
+    GetAvatarDataCsReq 361;         // GetAvatarDataScRsp, Avatar
+    GetAllLineupDataCsReq 756;      // GetAllLineupDataScRsp, LineupInfo, ExtraLineupType, LineupAvatar, AmountInfo
+    GetCurLineupDataCsReq 791;      // GetCurLineupDataScRsp
+    GetCurSceneInfoCsReq 1430;      // GetCurSceneInfoScRsp, SceneInfo
+    PlayerHeartBeatCsReq 42;        // PlayerHeartBeatScRsp
+
+    // Tutorial (dummy!)
+    GetTutorialGuideCsReq 1691;
+    UnlockTutorialGuideCsReq 1630;
+    GetTutorialCsReq 1661;
+
+    // Entity move (dummy!)
+    SceneEntityMoveCsReq 1461;
+
+    // Inventory (dummy!)
     GetBagCsReq 561;
-    GetAllLineupDataCsReq 756;
+    GetArchiveDataCsReq 2361;
+    DressAvatarCsReq 387;
+    TakeOffEquipmentCsReq 362;
+    Gfmigicacfn 321;    // DressRelicAvatarCsReq
+    Nbmofdgfejk 303;    // TakeOffRelicCsReq
+
+    // Chat (dummy!)
+    Dgaiigecbee 3961;   // SendMsgCsReq
+    Pignjacjgdl 3939;   // GetPrivateChatHistoryCsReq
+    Jhfffmnkcbf 2961;   // GetFriendListInfoCsReq
+
+    // In-game lineup
     JoinLineupCsReq 739;
     ChangeLineupLeaderCsReq 794;
     ReplaceLineupCsReq 709;
     QuitLineupCsReq 730;
-    GetCurLineupDataCsReq 791;
-    GetMissionStatusCsReq 1256;
-    PlayerGetTokenCsReq 39;
-    PlayerLoginCsReq 61;
-    PlayerHeartBeatCsReq 42;
-    GetHeroBasicTypeInfoCsReq 68;
-    GetBasicInfoCsReq 90;
-    GetEnteredSceneCsReq 1407; // getenteredscenecsreq
-    // Kkbapmgmmcb 1440; //getunlockteleportcsreq
-    GetCurSceneInfoCsReq 1430;
-    SceneCastSkillCsReq 1439; // scenecastskillcsreq
+
+    // Battle
     StartCocoonStageCsReq 1413;
-    GetSceneMapInfoCsReq 1484; //getscenemapinfocsreq
-    SceneEntityMoveCsReq 1461;
-    EnterSceneCsReq 1480; // enterscenecsreq
-    GetTutorialGuideCsReq 1691;
-    UnlockTutorialGuideCsReq 1630;
-    GetTutorialCsReq 1661;
+    PveBattleResultCsReq 161;
+    SceneCastSkillCsReq 1439;
+
+    // Teleport
+    GetEnteredSceneCsReq 1407;
+    GetSceneMapInfoCsReq 1484;
+    EnterSceneCsReq 1480;
+
+    // Optional
+    GetMailCsReq 861;
+    GetGachaInfoCsReq 1961;
+    DoGachaCsReq 1991;
+    GetQuestDataCsReq 961;
+    PlayerLoginFinishCsReq 86;
 }

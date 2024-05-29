@@ -8421,7 +8421,8 @@ pub struct Gdpmmlffckj {
 
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct Epcdknhldgl {}
+pub struct GetGachaInfoCsReq {} // GetGachaInfoCsReq
+
 
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -8445,7 +8446,7 @@ pub struct Ldhikjljmdc {
 
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct Dkddhjennfp {
+pub struct GachaInfo {
     #[prost(int64, tag = "3")]
     pub end_time: i64,
     #[prost(uint32, tag = "15")]
@@ -8455,7 +8456,7 @@ pub struct Dkddhjennfp {
     #[prost(uint32, repeated, tag = "4")]
     pub hjefpibalip: ::prost::alloc::vec::Vec<u32>,
     #[prost(uint32, tag = "9")]
-    pub dfdbmelhdpp: u32,
+    pub gacha_id: u32,
     #[prost(uint32, repeated, tag = "10")]
     pub ibomhpajoji: ::prost::alloc::vec::Vec<u32>,
     #[prost(string, tag = "7")]
@@ -8470,7 +8471,7 @@ pub struct Dkddhjennfp {
 
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct Kcmaooicbbb {
+pub struct GetGachaInfoScRsp {
     #[prost(uint32, tag = "7")]
     pub ghihlfpaejp: u32,
     #[prost(uint32, tag = "12")]
@@ -8482,16 +8483,16 @@ pub struct Kcmaooicbbb {
     #[prost(uint32, tag = "4")]
     pub retcode: u32,
     #[prost(message, repeated, tag = "2")]
-    pub bgigpbnbcme: ::prost::alloc::vec::Vec<Dkddhjennfp>,
+    pub gacha_info_list: ::prost::alloc::vec::Vec<GachaInfo>,
 }
 
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct Akphefjekam {
+pub struct DoGachaCsReq {
     #[prost(uint32, tag = "7")]
-    pub dfdbmelhdpp: u32,
+    pub gacha_id: u32,
     #[prost(uint32, tag = "10")]
-    pub dedelghmmje: u32,
+    pub gacha_num: u32,
     #[prost(uint32, tag = "13")]
     pub hfjddefdkfn: u32,
     #[prost(uint32, tag = "9")]
@@ -8500,24 +8501,24 @@ pub struct Akphefjekam {
 
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct Afgjlphfbpn {
+pub struct GachaItem {
     #[prost(message, optional, tag = "13")]
-    pub hjghnhljajl: ::core::option::Option<Item>,
+    pub gacha_item: ::core::option::Option<Item>,
     #[prost(message, optional, tag = "8")]
     pub fhfenbcnkei: ::core::option::Option<ItemList>,
     #[prost(bool, tag = "10")]
-    pub cdhekghjjce: bool,
+    pub is_new: bool,
     #[prost(message, optional, tag = "15")]
     pub eginhhfhbbh: ::core::option::Option<ItemList>,
 }
 
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct Gfepbnpgejl {
+pub struct DoGachaScRsp {
     #[prost(uint32, tag = "13")]
     pub giopaifpinl: u32,
     #[prost(uint32, tag = "10")]
-    pub dfdbmelhdpp: u32,
+    pub gacha_id: u32,
     #[prost(uint32, tag = "8")]
     pub retcode: u32,
     #[prost(uint32, tag = "3")]
@@ -8527,12 +8528,13 @@ pub struct Gfepbnpgejl {
     #[prost(uint32, tag = "4")]
     pub pdfinfdanea: u32,
     #[prost(message, repeated, tag = "1")]
-    pub gcejognjecl: ::prost::alloc::vec::Vec<Afgjlphfbpn>,
+    pub gacha_item_list: ::prost::alloc::vec::Vec<GachaItem>,
     #[prost(uint32, tag = "12")]
-    pub dedelghmmje: u32,
+    pub gacha_num: u32,
     #[prost(uint32, tag = "7")]
     pub mbdhnchflhc: u32,
 }
+
 
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -10117,7 +10119,7 @@ pub struct Bcggoemldfb {
 
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct Meojjjopnaj {
+pub struct GetMailCsReq { // Meojjjopnaj
     #[prost(uint32, tag = "4")]
     pub ddfoljicomi: u32,
     #[prost(uint32, tag = "3")]
@@ -14919,18 +14921,18 @@ pub struct Opgdokfipin {
 
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct Iifkdhanhml {}
+pub struct GetQuestDataCsReq {}
 
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct Pcminmfongb {
+pub struct Quest {
     #[prost(int64, tag = "3")]
-    pub cbbdfcbniln: i64,
+    pub finish_time: i64,
     #[prost(uint32, repeated, tag = "4")]
     pub ihmkpnpaipd: ::prost::alloc::vec::Vec<u32>,
     #[prost(uint32, tag = "1")]
     pub id: u32,
-    #[prost(enumeration = "Ibcjefpmhhn", tag = "13")]
+    #[prost(enumeration = "QuestStatus", tag = "13")]
     pub status: i32,
     #[prost(uint32, tag = "9")]
     pub progress: u32,
@@ -14938,11 +14940,11 @@ pub struct Pcminmfongb {
 
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct Nahgobmjpld {
+pub struct GetQuestDataScRsp {
     #[prost(message, repeated, tag = "2")]
-    pub gbpfmlkagek: ::prost::alloc::vec::Vec<Pcminmfongb>,
+    pub quest_list: ::prost::alloc::vec::Vec<Quest>,
     #[prost(uint32, tag = "10")]
-    pub ppajjpccnkd: u32,
+    pub total_achievement_exp: u32,
     #[prost(uint32, tag = "8")]
     pub retcode: u32,
 }
@@ -15043,7 +15045,7 @@ pub struct Almaeaofmkf {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Kmoaeiakdkn {
     #[prost(message, repeated, tag = "6")]
-    pub gbpfmlkagek: ::prost::alloc::vec::Vec<Pcminmfongb>,
+    pub gbpfmlkagek: ::prost::alloc::vec::Vec<Quest>,
     #[prost(uint32, tag = "7")]
     pub retcode: u32,
 }
@@ -20097,7 +20099,7 @@ pub struct SceneInfo {
     #[prost(uint32, tag = "15")]
     pub lgflfajffjl: u32,
     #[prost(uint32, tag = "13")]
-    pub pjbjelcgkof: u32,
+    pub game_mode_type: u32,
     #[prost(message, repeated, tag = "3")]
     pub ijmddokpdff: ::prost::alloc::vec::Vec<BuffInfo>,
     #[prost(message, optional, tag = "1472")]
@@ -20107,7 +20109,7 @@ pub struct SceneInfo {
     #[prost(map = "string, int32", tag = "211")]
     pub dynamic_values: ::std::collections::HashMap<::prost::alloc::string::String, i32>,
     #[prost(uint32, tag = "1")]
-    pub game_mode_type: u32,
+    pub world_id: u32,
     #[prost(message, repeated, tag = "9")]
     pub padggdamiam: ::prost::alloc::vec::Vec<EntityBuffInfo>,
     #[prost(message, repeated, tag = "11")]
@@ -21842,7 +21844,7 @@ pub struct Pkbehgpoein {
     #[prost(message, repeated, tag = "2")]
     pub basic_type_info_list: ::prost::alloc::vec::Vec<HeroBasicTypeInfo>,
     #[prost(message, repeated, tag = "15")]
-    pub gbpfmlkagek: ::prost::alloc::vec::Vec<Pcminmfongb>,
+    pub gbpfmlkagek: ::prost::alloc::vec::Vec<Quest>,
     #[prost(uint32, repeated, tag = "13")]
     pub idgakomjiio: ::prost::alloc::vec::Vec<u32>,
     #[prost(message, repeated, tag = "222")]
@@ -35447,25 +35449,25 @@ impl CmdQuestType {
 }
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
 #[repr(i32)]
-pub enum Ibcjefpmhhn {
+pub enum QuestStatus {
     QuestNone = 0,
     QuestDoing = 1,
     QuestFinish = 2,
     QuestClose = 3,
     QuestDelete = 4,
 }
-impl Ibcjefpmhhn {
+impl QuestStatus {
     /// String value of the enum field names used in the ProtoBuf definition.
     ///
     /// The values are not transformed in any way and thus are considered stable
     /// (if the ProtoBuf definition does not change) and safe for programmatic use.
     pub fn as_str_name(&self) -> &'static str {
         match self {
-            Ibcjefpmhhn::QuestNone => "QUEST_NONE",
-            Ibcjefpmhhn::QuestDoing => "QUEST_DOING",
-            Ibcjefpmhhn::QuestFinish => "QUEST_FINISH",
-            Ibcjefpmhhn::QuestClose => "QUEST_CLOSE",
-            Ibcjefpmhhn::QuestDelete => "QUEST_DELETE",
+            QuestStatus::QuestNone => "QUEST_NONE",
+            QuestStatus::QuestDoing => "QUEST_DOING",
+            QuestStatus::QuestFinish => "QUEST_FINISH",
+            QuestStatus::QuestClose => "QUEST_CLOSE",
+            QuestStatus::QuestDelete => "QUEST_DELETE",
         }
     }
     /// Creates an enum from field names used in the ProtoBuf definition.

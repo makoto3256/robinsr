@@ -275,10 +275,10 @@ async fn load_scene(
         floor_id: enterance.floor_id,
         plane_id: enterance.plane_id,
         entry_id,
-        pjbjelcgkof: plane.plane_type as u32,
+        game_mode_type: plane.plane_type as u32,
         nnfgkelcban: 1,
         lgflfajffjl: 1,
-        game_mode_type: 1,
+        world_id: plane.world_id,
         ..Default::default()
     };
 

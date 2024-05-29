@@ -18,6 +18,18 @@ pub async fn on_get_bag_cs_req(session: &mut PlayerSession, _: &GetBagCsReq) -> 
                     .map(|v| v.to_equipment_proto())
                     .collect(),
                 relic_list: player.relics.iter().map(|v| v.to_relic_proto()).collect(),
+                macfjibhfad: vec![
+                    Efdnhdlcegi {
+                        tid: 101, // Normal Pass
+                        num: 999999,
+                        ..Default::default()
+                    },
+                    Efdnhdlcegi {
+                        tid: 102, // Special Pass
+                        num: 999999,
+                        ..Default::default()
+                    },
+                ],
                 ..Default::default()
             },
         )

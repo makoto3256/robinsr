@@ -1,13 +1,15 @@
 mod authentication;
 mod avatar;
 mod battle;
+mod chat;
+mod inventory;
 mod lineup;
+mod mail;
 mod mission;
 mod player;
 mod scene;
 mod tutorial;
-mod inventory;
-mod chat;
+mod gacha;
 
 use anyhow::Result;
 use paste::paste;
@@ -20,13 +22,15 @@ use crate::net::NetPacket;
 pub use authentication::*;
 pub use avatar::*;
 pub use battle::*;
+pub use chat::*;
+pub use inventory::*;
 pub use lineup::*;
+pub use mail::*;
 pub use mission::*;
 pub use player::*;
 pub use scene::*;
 pub use tutorial::*;
-pub use inventory::*;
-pub use chat::*;
+pub use gacha::*;
 
 #[allow(unused_imports)]
 use proto::{
@@ -52,7 +56,6 @@ use proto::{
     CmdTravelBrochureType::*, CmdTreasureDungeonType::*, CmdTutorialType::*, CmdWaypointType::*,
     CmdWolfBroType::*,
 };
-
 
 macro_rules! dummy {
     ($($cmd:ident),* $(,)*) => {
@@ -95,7 +98,7 @@ dummy! {
     // SceneEntityMove,
     GetLevelRewardTakenList,
     GetRogueScoreRewardInfo,
-    GetGachaInfo,
+    // GetGachaInfo,
     QueryProductInfo,
     GetQuestData,
     GetQuestRecord,
@@ -136,6 +139,7 @@ dummy! {
     GetVideoVersionKey,
     GetCurBattleInfo,
     GetPhoneData,
-    PlayerLoginFinish,
-    InteractProp
+    // PlayerLoginFinish,
+    InteractProp,
+    FinishTalkMission
 }
