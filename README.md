@@ -43,7 +43,3 @@ cargo install --path sdkserver
 ## Usage
 
 To begin using the server, you need to run both the SDK server and the game server. Just run the `run.bat` file.
-
-## Connecting
-[Get 2.2 beta client](https://bhrpg-prod.oss-accelerate.aliyuncs.com/client/beta/20240322124944_scfGE0xJXlWtoJ1r/StarRail_2.1.51.zip)
-Replace [mhypbase.dll](https://git.xeondev.com/reversedrooms/RobinSR/raw/branch/master/mhypbase.dll) file in your game folder, it will redirect game traffic (and also disable in-game censorship)
