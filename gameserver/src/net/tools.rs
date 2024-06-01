@@ -107,6 +107,7 @@ impl AvatarJson {
                 owner_index: index,
                 level: 1,
                 id: *buff_id,
+                dynamic_values: HashMap::from([(String::from("SkillIndex"), 2.0)]),
                 ..Default::default()
             });
         }
